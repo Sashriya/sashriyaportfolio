@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Eye, FileSearch, NotebookPen, ArrowUpRight, Github } from "lucide-react";
+import { Eye, FileSearch, NotebookPen, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -80,7 +81,7 @@ const Projects = () => {
                 Live Demo <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
-                <Github className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4" />
               </a>
             </div>
           </motion.article>

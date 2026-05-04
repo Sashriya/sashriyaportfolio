@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Mail, Phone, Linkedin, Github, Send, MapPin } from "lucide-react";
+import { Mail, Phone, Send, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -20,8 +21,8 @@ const Contact = () => {
   const contacts = [
     { icon: Mail, label: "Email", value: "sashriya.murali@gmail.com", href: "mailto:sashriya.murali@gmail.com" },
     { icon: Phone, label: "Phone", value: "+91 9443176161", href: "tel:+919443176161" },
-    { icon: Linkedin, label: "LinkedIn", value: "Connect with me", href: "#" },
-    { icon: Github, label: "GitHub", value: "View my work", href: "#" },
+    { icon: label: "LinkedIn", value: "Connect with me", href: "#" },
+    { icon: label: "GitHub", value: "View my work", href: "#" },
   ];
 
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { ArrowDown, Mail, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = ["Full Stack Developer", "MERN Stack Engineer", "AI/ML Enthusiast", "Problem Solver"];
@@ -98,8 +99,8 @@ const Hero = () => {
               </a>
               <div className="flex items-center gap-2 ml-2">
                 {[
-                  { icon: Github, href: "#" },
-                  { icon: Linkedin, href: "#" },
+                  { icon: href: "#" },
+                  { icon: href: "#" },
                   { icon: Mail, href: "mailto:sashriya.murali@gmail.com" },
                 ].map(({ icon: Icon, href }, i) => (
                   <motion.a
