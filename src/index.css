@@ -6,45 +6,46 @@
 
 @layer base {
   :root {
-    --background: 230 25% 5%;
-    --foreground: 210 40% 98%;
+    --background: 40 60% 97%;
+    --foreground: 260 40% 15%;
 
-    --card: 230 25% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 40% 15%;
 
-    --popover: 230 25% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 40% 15%;
 
-    --primary: 186 100% 60%;
-    --primary-foreground: 230 25% 5%;
-    --primary-glow: 186 100% 70%;
+    --primary: 280 90% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 320 95% 70%;
 
-    --secondary: 290 90% 65%;
-    --secondary-foreground: 230 25% 5%;
+    --secondary: 175 85% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 45 100% 60%;
-    --accent-foreground: 230 25% 5%;
+    --accent: 35 100% 58%;
+    --accent-foreground: 260 40% 15%;
 
-    --muted: 230 20% 15%;
-    --muted-foreground: 220 15% 70%;
+    --muted: 280 30% 94%;
+    --muted-foreground: 260 15% 40%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 230 25% 18%;
-    --input: 230 25% 15%;
-    --ring: 186 100% 60%;
+    --border: 280 30% 88%;
+    --input: 280 30% 92%;
+    --ring: 280 90% 60%;
 
     --radius: 1rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(186 100% 60%), hsl(290 90% 65%));
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(186 100% 60% / 0.4), transparent 70%);
-    --gradient-mesh: radial-gradient(at 20% 30%, hsl(186 100% 60% / 0.25) 0px, transparent 50%),
-                     radial-gradient(at 80% 70%, hsl(290 90% 65% / 0.25) 0px, transparent 50%),
-                     radial-gradient(at 50% 100%, hsl(45 100% 60% / 0.15) 0px, transparent 50%);
-    --shadow-glow: 0 0 40px hsl(186 100% 60% / 0.4);
-    --shadow-glow-secondary: 0 0 40px hsl(290 90% 65% / 0.4);
-    --shadow-elegant: 0 20px 60px -10px hsl(186 100% 60% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(280 90% 60%), hsl(320 95% 65%), hsl(35 100% 60%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(280 90% 60% / 0.35), transparent 70%);
+    --gradient-mesh: radial-gradient(at 15% 20%, hsl(280 90% 70% / 0.35) 0px, transparent 50%),
+                     radial-gradient(at 85% 25%, hsl(175 85% 55% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 75% 85%, hsl(320 95% 70% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 20% 80%, hsl(35 100% 65% / 0.25) 0px, transparent 50%);
+    --shadow-glow: 0 0 40px hsl(280 90% 60% / 0.45);
+    --shadow-glow-secondary: 0 0 40px hsl(320 95% 65% / 0.45);
+    --shadow-elegant: 0 20px 60px -10px hsl(280 90% 60% / 0.35);
 
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -91,7 +92,7 @@
 
 @layer components {
   .glass {
-    @apply bg-card/40 backdrop-blur-xl border border-white/10;
+    @apply bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_-8px_hsl(280_90%_60%/0.2)];
   }
 
   .glow-text {

@@ -116,51 +116,93 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Avatar / orbital decoration */}
+          {/* Floating creative composition */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative w-full max-w-md mx-auto aspect-square"
           >
-            <div className="absolute inset-0 rounded-full bg-gradient-glow animate-glow-pulse" />
-            <div className="absolute inset-8 rounded-full border border-primary/20 animate-spin-slow" />
-            <div className="absolute inset-16 rounded-full border border-secondary/30 animate-spin-slow" style={{ animationDirection: 'reverse', animationDuration: '15s' }} />
+            {/* Morphing blob backdrop */}
+            <motion.div
+              className="absolute inset-6 bg-gradient-primary opacity-70 blur-2xl"
+              animate={{
+                borderRadius: [
+                  "60% 40% 30% 70% / 60% 30% 70% 40%",
+                  "30% 60% 70% 40% / 50% 60% 30% 60%",
+                  "60% 40% 30% 70% / 60% 30% 70% 40%",
+                ],
+              }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            />
 
-            {/* Orbiting tech badges */}
-            {['React', 'Node', 'Python', 'AI', 'MongoDB'].map((tech, i) => {
-              const angle = (i * 360) / 5;
-              return (
-                <motion.div
-                  key={tech}
-                  className="absolute top-1/2 left-1/2 w-14 h-14 -ml-7 -mt-7"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  style={{ transformOrigin: 'center' }}
-                >
-                  <div
-                    className="absolute"
-                    style={{
-                      transform: `rotate(${angle}deg) translateY(-180px) rotate(-${angle}deg)`,
-                    }}
-                  >
-                    <motion.div
-                      animate={{ rotate: -360 }}
-                      transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                      className="glass rounded-2xl px-4 py-2 mono text-xs whitespace-nowrap shadow-elegant"
-                    >
-                      {tech}
-                    </motion.div>
-                  </div>
-                </motion.div>
-              );
-            })}
-
-            <div className="absolute inset-24 rounded-full bg-gradient-primary p-1 animate-float">
-              <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                <span className="font-display text-7xl font-bold glow-text">SM</span>
+            {/* Floating code window */}
+            <motion.div
+              animate={{ y: [0, -12, 0], rotate: [-2, 2, -2] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-6 left-2 w-64 glass rounded-2xl p-4 shadow-elegant z-20"
+            >
+              <div className="flex gap-1.5 mb-3">
+                <span className="w-2.5 h-2.5 rounded-full bg-destructive" />
+                <span className="w-2.5 h-2.5 rounded-full bg-accent" />
+                <span className="w-2.5 h-2.5 rounded-full bg-secondary" />
               </div>
-            </div>
+              <div className="mono text-[11px] space-y-1.5 leading-relaxed">
+                <div><span className="text-secondary">const</span> <span className="text-primary">dev</span> = {`{`}</div>
+                <div className="pl-3"><span className="text-accent">name</span>: <span className="text-secondary">'Sashriya'</span>,</div>
+                <div className="pl-3"><span className="text-accent">stack</span>: <span className="text-secondary">'MERN'</span>,</div>
+                <div className="pl-3"><span className="text-accent">loves</span>: <span className="text-secondary">'AI/ML'</span></div>
+                <div>{`}`};</div>
+              </div>
+            </motion.div>
+
+            {/* Floating tech chips */}
+            {[
+              { label: "React", x: "75%", y: "10%", delay: 0, color: "from-primary to-primary-glow" },
+              { label: "Node.js", x: "82%", y: "55%", delay: 1, color: "from-secondary to-primary" },
+              { label: "Python", x: "10%", y: "70%", delay: 0.5, color: "from-accent to-primary-glow" },
+              { label: "MongoDB", x: "65%", y: "85%", delay: 1.5, color: "from-secondary to-accent" },
+              { label: "AI/ML", x: "5%", y: "25%", delay: 2, color: "from-primary-glow to-secondary" },
+            ].map((chip) => (
+              <motion.div
+                key={chip.label}
+                className="absolute z-30"
+                style={{ left: chip.x, top: chip.y }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+                transition={{
+                  opacity: { delay: 0.5 + chip.delay * 0.2 },
+                  scale: { delay: 0.5 + chip.delay * 0.2, type: "spring" },
+                  y: { duration: 3 + chip.delay, repeat: Infinity, ease: "easeInOut" },
+                }}
+                whileHover={{ scale: 1.15, rotate: 6 }}
+              >
+                <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${chip.color} text-primary-foreground mono text-[11px] font-semibold shadow-glow whitespace-nowrap`}>
+                  {chip.label}
+                </div>
+              </motion.div>
+            ))}
+
+            {/* Sparkle particles */}
+            {Array.from({ length: 8 }).map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 rounded-full bg-accent z-10"
+                style={{
+                  left: `${20 + (i * 9) % 70}%`,
+                  top: `${15 + (i * 13) % 70}%`,
+                }}
+                animate={{
+                  scale: [0, 1.5, 0],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
+              />
+            ))}
           </motion.div>
         </div>
 
