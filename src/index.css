@@ -92,7 +92,7 @@
 
 @layer components {
   .glass {
-    @apply bg-card/40 backdrop-blur-xl border border-white/10;
+    @apply bg-white/60 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_-8px_hsl(280_90%_60%/0.2)];
   }
 
   .glow-text {
