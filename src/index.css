@@ -176,3 +176,9 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* Custom cursor overrides */
+html.custom-cursor,
+html.custom-cursor * {
+  cursor: none !important;
+}

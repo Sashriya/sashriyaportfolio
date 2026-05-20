@@ -6,10 +6,12 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   return (
     <div className="relative min-h-screen">
+      <CustomCursor />
       <AnimatedBackground />
       <Navbar />
       <main>
