@@ -101,9 +101,9 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {[
             {
-              role: "AI & ML Intern",
-              org: "United IT & CADD Divisions",
-              points: ["Worked on Machine Learning and Deep Learning using Python", "Hands-on experience in model training and evaluation"],
+              role: "Web Development Intern",
+              org: "LogicVeda Solutions",
+              points: ["Built a real-time collaboration platform using the MERN stack", "Hands-on experience with WebSockets, full-stack development and deployment"],
             },
             {
               role: "Data Analytics Intern",
