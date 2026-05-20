@@ -11,6 +11,7 @@ const projects = [
     description: "A hands-free computer control system using eye-tracking. Implemented blink-to-click with fast response time, making computers accessible to all.",
     tags: ["Python", "OpenCV", "Computer Vision", "AI"],
     gradient: "from-cyan-500 to-blue-600",
+    github: "https://github.com/Sashriya/DhoorDarshan",
   },
   {
     icon: FileText,
@@ -18,6 +19,7 @@ const projects = [
     description: "A real-time collaborative editor built with MERN, Socket.IO and Quill. Live multi-user document sync with JWT auth and complete CRUD operations.",
     tags: ["MERN", "Socket.IO", "Quill", "JWT"],
     gradient: "from-fuchsia-500 to-purple-600",
+    github: "https://github.com/Sashriya/Google-Docs-Clone",
   },
   {
     icon: NotebookPen,
@@ -25,6 +27,7 @@ const projects = [
     description: "A full-stack MERN application for developers to manage notes. Implemented complete CRUD operations and clean REST APIs.",
     tags: ["MongoDB", "Express", "React", "Node.js"],
     gradient: "from-emerald-500 to-teal-600",
+    github: "https://github.com/Sashriya/Mern-DevNotes",
   },
 ];
 
