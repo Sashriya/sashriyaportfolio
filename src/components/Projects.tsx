@@ -11,6 +11,7 @@ const projects = [
     description: "A hands-free computer control system using eye-tracking. Implemented blink-to-click with fast response time, making computers accessible to all.",
     tags: ["Python", "OpenCV", "Computer Vision", "AI"],
     gradient: "from-cyan-500 to-blue-600",
+    github: "https://github.com/Sashriya/DhoorDarshan",
   },
   {
     icon: FileText,
@@ -18,6 +19,7 @@ const projects = [
     description: "A real-time collaborative editor built with MERN, Socket.IO and Quill. Live multi-user document sync with JWT auth and complete CRUD operations.",
     tags: ["MERN", "Socket.IO", "Quill", "JWT"],
     gradient: "from-fuchsia-500 to-purple-600",
+    github: "https://github.com/Sashriya/Google-Docs-Clone",
   },
   {
     icon: NotebookPen,
@@ -25,6 +27,7 @@ const projects = [
     description: "A full-stack MERN application for developers to manage notes. Implemented complete CRUD operations and clean REST APIs.",
     tags: ["MongoDB", "Express", "React", "Node.js"],
     gradient: "from-emerald-500 to-teal-600",
+    github: "https://github.com/Sashriya/Mern-DevNotes",
   },
 ];
 
@@ -80,7 +83,7 @@ const Projects = () => {
               <a href="#" className="flex-1 inline-flex items-center justify-center gap-1.5 text-sm font-semibold py-2.5 rounded-xl bg-gradient-primary text-primary-foreground hover:shadow-glow transition-shadow">
                 Live Demo <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
+              <a href={p.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
                 <GithubIcon className="w-4 h-4" />
               </a>
             </div>

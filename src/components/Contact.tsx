@@ -21,8 +21,8 @@ const Contact = () => {
   const contacts = [
     { icon: Mail, label: "Email", value: "sashriya.murali@gmail.com", href: "mailto:sashriya.murali@gmail.com" },
     { icon: Phone, label: "Phone", value: "+91 9443176161", href: "tel:+919443176161" },
-    { icon: LinkedinIcon, label: "LinkedIn", value: "Connect with me", href: "#" },
-    { icon: GithubIcon, label: "GitHub", value: "View my work", href: "#" },
+    { icon: LinkedinIcon, label: "LinkedIn", value: "Connect with me", href: "https://www.linkedin.com/in/sashriya-m/" },
+    { icon: GithubIcon, label: "GitHub", value: "View my work", href: "https://github.com/Sashriya" },
   ];
 
   return (

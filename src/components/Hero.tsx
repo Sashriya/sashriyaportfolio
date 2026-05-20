@@ -99,8 +99,8 @@ const Hero = () => {
               </a>
               <div className="flex items-center gap-2 ml-2">
                 {[
-                  { icon: GithubIcon, href: "#" },
-                  { icon: LinkedinIcon, href: "#" },
+                  { icon: GithubIcon, href: "https://github.com/Sashriya" },
+                  { icon: LinkedinIcon, href: "https://www.linkedin.com/in/sashriya-m/" },
                   { icon: Mail, href: "mailto:sashriya.murali@gmail.com" },
                 ].map(({ icon: Icon, href }, i) => (
                   <motion.a
