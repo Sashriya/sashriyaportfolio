@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Award, BookOpen, Users, Trophy } from "lucide-react";
+import { Award, BookOpen, Users, Trophy, Code2 } from "lucide-react";
 
 const certs = [
   {
@@ -22,6 +22,12 @@ const certs = [
     issuer: "Google Developer Groups (GDG)",
     color: "from-emerald-400 to-teal-500",
   },
+  {
+    icon: Code2,
+    title: "Java & React (Frontend Developer)",
+    issuer: "HackerRank",
+    color: "from-amber-400 to-orange-500",
+  },
 ];
 
 const Certifications = () => {
@@ -29,7 +35,7 @@ const Certifications = () => {
 
   return (
     <Section id="certifications" eyebrow="Recognition" title="Certifications & Achievements" subtitle="Continuously learning and growing through certifications and community.">
-      <div ref={ref} className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {certs.map((c, i) => (
           <motion.div
             key={c.title}
