@@ -31,8 +31,8 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16">
       <div className="container">
-        <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 items-center">
-          <div>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          <div className="flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
