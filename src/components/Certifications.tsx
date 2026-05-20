@@ -35,7 +35,7 @@ const Certifications = () => {
 
   return (
     <Section id="certifications" eyebrow="Recognition" title="Certifications & Achievements" subtitle="Continuously learning and growing through certifications and community.">
-      <div ref={ref} className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div ref={ref} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {certs.map((c, i) => (
           <motion.div
             key={c.title}
