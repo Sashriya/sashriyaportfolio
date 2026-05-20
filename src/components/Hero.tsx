@@ -29,7 +29,7 @@ const Hero = () => {
   }, [text, deleting, roleIdx]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16">
+    <section id="home" className="relative min-h-screen flex items-center pt-40 md:pt-48 pb-16">
       <div className="container">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="flex flex-col items-center">
