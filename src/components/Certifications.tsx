@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Award, BookOpen, Users, Trophy } from "lucide-react";
+import { Award, BookOpen, Users, Trophy, Code2 } from "lucide-react";
 
 const certs = [
   {
@@ -21,6 +21,12 @@ const certs = [
     title: "Active Member – 2024",
     issuer: "Google Developer Groups (GDG)",
     color: "from-emerald-400 to-teal-500",
+  },
+  {
+    icon: Code2,
+    title: "Java & React (Frontend Developer)",
+    issuer: "HackerRank",
+    color: "from-amber-400 to-orange-500",
   },
 ];
 
