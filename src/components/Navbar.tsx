@@ -191,7 +191,7 @@ const Navbar = () => {
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className="md:hidden fixed top-20 left-4 right-4 z-50 glass rounded-3xl p-3 shadow-elegant"
             >
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 gap-2">
                 {sections.map((s, i) => {
                   const isActive = active === s.id;
                   return (
