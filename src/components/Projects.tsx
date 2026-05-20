@@ -83,7 +83,7 @@ const Projects = () => {
               <a href="#" className="flex-1 inline-flex items-center justify-center gap-1.5 text-sm font-semibold py-2.5 rounded-xl bg-gradient-primary text-primary-foreground hover:shadow-glow transition-shadow">
                 Live Demo <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
+              <a href={p.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
                 <GithubIcon className="w-4 h-4" />
               </a>
             </div>
