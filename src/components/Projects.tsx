@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Eye, FileSearch, NotebookPen, ArrowUpRight } from "lucide-react";
+import { Eye, FileText, NotebookPen, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -13,10 +13,10 @@ const projects = [
     gradient: "from-cyan-500 to-blue-600",
   },
   {
-    icon: FileSearch,
-    title: "AI Resume Checker",
-    description: "An AI tool that analyzes resumes and generates ATS scores. Integrated Google Gemini API for intelligent feedback and improvement suggestions.",
-    tags: ["Gemini API", "Python", "AI/ML", "NLP"],
+    icon: FileText,
+    title: "Google Docs Clone",
+    description: "A real-time collaborative editor built with MERN, Socket.IO and Quill. Live multi-user document sync with JWT auth and complete CRUD operations.",
+    tags: ["MERN", "Socket.IO", "Quill", "JWT"],
     gradient: "from-fuchsia-500 to-purple-600",
   },
   {
