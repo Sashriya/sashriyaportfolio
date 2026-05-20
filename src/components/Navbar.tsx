@@ -170,7 +170,8 @@ const Navbar = () => {
             </AnimatePresence>
           </motion.button>
         </div>
-      </motion.nav>
+        </motion.nav>
+      </div>
 
       {/* Mobile menu sheet */}
       <AnimatePresence>
