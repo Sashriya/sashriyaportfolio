@@ -48,14 +48,17 @@ const Navbar = () => {
       />
 
       {/* Desktop Navbar */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
+      <div
+        className={`fixed left-0 right-0 z-50 flex justify-center pointer-events-none transition-all duration-500 ${
           scrolled ? "top-3" : "top-5"
         }`}
       >
+        <motion.nav
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="pointer-events-auto"
+        >
         <div className={`hidden md:flex items-center gap-2 glass rounded-full pl-2 pr-2 py-2 transition-all duration-500 ${
           scrolled ? 'shadow-elegant border-primary/20' : ''
         }`}>
@@ -167,7 +170,8 @@ const Navbar = () => {
             </AnimatePresence>
           </motion.button>
         </div>
-      </motion.nav>
+        </motion.nav>
+      </div>
 
       {/* Mobile menu sheet */}
       <AnimatePresence>
