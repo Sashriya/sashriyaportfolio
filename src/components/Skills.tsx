@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Code, Globe, Database, Brain, BarChart3, Wrench, Palette } from "lucide-react";
+import { Code, Globe, Database, Brain, Braces, Wrench, ShieldCheck } from "lucide-react";
 
 const skillGroups = [
-  { icon: Code, title: "Programming", color: "from-cyan-400 to-blue-500", items: ["C", "Java", "Python"] },
-  { icon: Globe, title: "Web Development", color: "from-fuchsia-400 to-pink-500", items: ["HTML5", "CSS3", "TailwindCSS", "JavaScript", "React.js", "Node.js", "Express.js", "REST APIs", "Bootstrap"] },
-  { icon: Database, title: "Databases", color: "from-emerald-400 to-teal-500", items: ["MySQL", "MongoDB"] },
-  { icon: Brain, title: "AI / ML", color: "from-violet-400 to-purple-500", items: ["Machine Learning", "Gemini API"] },
-  { icon: BarChart3, title: "Data Tools", color: "from-amber-400 to-orange-500", items: ["Power BI", "Data Analysis"] },
-  { icon: Wrench, title: "Dev Tools", color: "from-sky-400 to-indigo-500", items: ["Git", "GitHub"] },
-  { icon: Palette, title: "Design", color: "from-rose-400 to-red-500", items: ["Adobe InDesign", "Photoshop"] },
+  { icon: Code, title: "Programming", color: "from-cyan-400 to-blue-500", items: ["Java", "Python", "C", "JavaScript", "HTML5", "CSS3"] },
+  { icon: Globe, title: "Web Development", color: "from-fuchsia-400 to-pink-500", items: ["React.js", "Node.js", "Express.js", "RESTful APIs", "TailwindCSS", "Bootstrap", "Socket.IO"] },
+  { icon: Database, title: "Databases", color: "from-emerald-400 to-teal-500", items: ["MySQL", "MongoDB", "PostgreSQL", "Mongoose"] },
+  { icon: Brain, title: "AI / LLM", color: "from-violet-400 to-purple-500", items: ["Gemini API", "Groq API", "LLaMA 3.1", "Prompt Engineering"] },
+  { icon: Braces, title: "Core CS", color: "from-amber-400 to-orange-500", items: ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems", "Computer Networks", "Problem Solving"] },
+  { icon: Wrench, title: "Developer Tools", color: "from-sky-400 to-indigo-500", items: ["Git", "GitHub", "VS Code", "Power BI", "Firecrawl", "OpenCode"] },
+  { icon: ShieldCheck, title: "Testing & QA", color: "from-rose-400 to-red-500", items: ["Unit Testing", "Widget Testing", "Postman", "BrowserStack", "GTmetrix", "Android Emulator"] },
 ];
 
-const marqueeSkills = ["React.js", "Node.js", "Python", "MongoDB", "Express.js", "TailwindCSS", "Java", "Gemini API", "Power BI", "MySQL", "Git", "JavaScript", "REST APIs", "Machine Learning"];
+const marqueeSkills = ["React.js", "Node.js", "Java", "Python", "MongoDB", "PostgreSQL", "Socket.IO", "Groq API", "LLaMA 3.1", "Gemini API", "RESTful APIs", "Postman", "Git", "JavaScript"];
 
 const Skills = () => {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
