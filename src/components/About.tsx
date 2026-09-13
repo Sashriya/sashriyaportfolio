@@ -6,8 +6,8 @@ import { GraduationCap, Code2, Briefcase, Languages } from "lucide-react";
 const stats = [
   { label: "CGPA", value: "8.00" },
   { label: "Projects", value: "3+" },
-  { label: "Internships", value: "2" },
-  { label: "Tech Stack", value: "10+" },
+  { label: "Experience", value: "2" },
+  { label: "Graduating", value: "2027" },
 ];
 
 const About = () => {
@@ -24,23 +24,22 @@ const About = () => {
         >
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary/20 rounded-full blur-3xl" />
           <p className="text-lg leading-relaxed text-muted-foreground mb-6 relative">
-            I'm an enthusiastic Computer Science student and Full Stack Web Developer with hands-on
-            experience in <span className="text-primary font-semibold">Python</span>, the{" "}
-            <span className="text-primary font-semibold">MERN stack</span>, and{" "}
-            <span className="text-secondary font-semibold">AI/ML technologies</span>.
+            I'm a final-year Computer Science undergraduate and Full Stack Developer with hands-on
+            experience building <span className="text-primary font-semibold">production-style MERN applications</span>,{" "}
+            real-time multi-user systems, and <span className="text-secondary font-semibold">AI-powered products</span>.
           </p>
           <p className="text-lg leading-relaxed text-muted-foreground mb-8 relative">
-            I specialize in designing scalable RESTful applications with clean and maintainable
-            code. I'm currently seeking software engineering and web development roles where I can
-            contribute to real-world solutions.
+            My foundations include Data Structures & Algorithms, OOP, DBMS, Operating Systems, and
+            Computer Networks. I'm seeking Software Engineer or Full Stack Developer roles where I
+            can design, build, and ship reliable products.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 relative">
             {[
               { icon: GraduationCap, title: "B.E. CSE", sub: "KSR IET • 2023–2027" },
-              { icon: Briefcase, title: "2 Internships", sub: "AI/ML & Data Analytics" },
-              { icon: Code2, title: "Full Stack", sub: "MERN + Python" },
-              { icon: Languages, title: "Languages", sub: "Tamil, English" },
+              { icon: Briefcase, title: "2 Roles", sub: "Full Stack & AI Product" },
+              { icon: Code2, title: "Full Stack", sub: "MERN + REST APIs" },
+              { icon: Languages, title: "Languages", sub: "Tamil (Native), English" },
             ].map((item, i) => (
               <motion.div
                 key={i}

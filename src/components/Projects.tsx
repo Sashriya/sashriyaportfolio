@@ -1,33 +1,34 @@
 import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { GithubIcon } from "./BrandIcons";
 import { useInView } from "react-intersection-observer";
 import Section from "./Section";
-import { Eye, FileText, NotebookPen, ArrowUpRight } from "lucide-react";
+import { FileText, TerminalSquare, Bot, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    icon: Eye,
-    title: "Gaze-Controlled Cursor System",
-    description: "A hands-free computer control system using eye-tracking. Implemented blink-to-click with fast response time, making computers accessible to all.",
-    tags: ["Python", "OpenCV", "Computer Vision", "AI"],
-    gradient: "from-cyan-500 to-blue-600",
-    github: "https://github.com/Sashriya/DhoorDarshan",
-  },
-  {
     icon: FileText,
     title: "Google Docs Clone",
-    description: "A real-time collaborative editor built with MERN, Socket.IO and Quill. Live multi-user document sync with JWT auth and complete CRUD operations.",
-    tags: ["MERN", "Socket.IO", "Quill", "JWT"],
-    gradient: "from-fuchsia-500 to-purple-600",
+    year: "2025",
+    description: "A real-time collaborative editor with concurrent multi-user editing, sub-second Socket.IO sync, JWT authentication, UUID-based routing, and persistent Quill documents.",
+    tags: ["React.js", "Node.js", "MongoDB", "Socket.IO"],
+    gradient: "from-cyan-500 to-blue-600",
     github: "https://github.com/Sashriya/Google-Docs-Clone",
   },
   {
-    icon: NotebookPen,
-    title: "DevNotes",
-    description: "A full-stack MERN application for developers to manage notes. Implemented complete CRUD operations and clean REST APIs.",
-    tags: ["MongoDB", "Express", "React", "Node.js"],
+    icon: TerminalSquare,
+    title: "LogMonitor",
+    year: "2025",
+    description: "An authenticated monitoring service that streams live server logs through WebSockets, with REST APIs, path-traversal protection, and efficient offset-based log tailing.",
+    tags: ["Node.js", "Express.js", "MongoDB", "WebSockets"],
+    gradient: "from-fuchsia-500 to-purple-600",
+  },
+  {
+    icon: Bot,
+    title: "BuddyBot",
+    year: "2026",
+    description: "A deployed Tanglish conversational chatbot powered by Groq's LLaMA 3.1 API, featuring a consistent persona, session history, and live typing indicators.",
+    tags: ["Python", "Streamlit", "Groq API", "LLaMA 3.1"],
     gradient: "from-emerald-500 to-teal-600",
-    github: "https://github.com/Sashriya/Mern-DevNotes",
   },
 ];
 
@@ -62,7 +63,7 @@ const Projects = () => {
                 <p.icon className="w-10 h-10 text-white" strokeWidth={1.5} />
               </motion.div>
               <div className="absolute top-3 right-3 mono text-[10px] uppercase tracking-wider px-2 py-1 rounded-full bg-black/30 text-white">
-                0{i + 1}
+                {p.year}
               </div>
             </div>
 
@@ -79,14 +80,16 @@ const Projects = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 relative">
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-1.5 text-sm font-semibold py-2.5 rounded-xl bg-gradient-primary text-primary-foreground hover:shadow-glow transition-shadow">
-                Explore <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
-                <GithubIcon className="w-4 h-4" />
-              </a>
-            </div>
+            {p.github && (
+              <div className="flex items-center gap-3 relative">
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-1.5 text-sm font-semibold py-2.5 rounded-xl bg-gradient-primary text-primary-foreground hover:shadow-glow transition-shadow">
+                  Explore <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" aria-label={`${p.title} GitHub repository`} className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 hover:border-primary flex items-center justify-center transition-colors">
+                  <GithubIcon className="w-4 h-4" />
+                </a>
+              </div>
+            )}
           </motion.article>
         ))}
       </div>
@@ -105,13 +108,13 @@ const Projects = () => {
           {[
             {
               role: "Web Development Intern",
-              org: "LogicVeda Solutions",
-              points: ["Built a real-time collaboration platform using the MERN stack", "Hands-on experience with WebSockets, full-stack development and deployment"],
+              org: "Logic Veda Solutions · Namakkal / Remote · 2026",
+              points: ["Built and shipped MERN features for a real-time collaboration platform using REST APIs and WebSockets", "Collaborated on feature implementation, API integration, debugging, and pre-deployment testing"],
             },
             {
-              role: "Data Analytics Intern",
-              org: "Stack & Queue Educations",
-              points: ["Built dashboards using Power BI for data visualization", "Performed data processing and analytical reporting"],
+              role: "Technical Analyst – AI Product",
+              org: "ZenteiQ AI HUB · Bangalore · 2026",
+              points: ["Built Firecrawl and OpenCode pipelines that transformed raw HTML into structured Markdown for AI processing", "Developed a Chromium/CDP crawler with JavaScript rendering, authenticated sessions, and recursive multi-page crawling"],
             },
           ].map((e, i) => (
             <motion.div
@@ -121,7 +124,7 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: 0.5 + i * 0.15 }}
               className="glass rounded-2xl p-6 hover:border-primary/40 border-transparent transition-colors"
             >
-              <div className="mono text-xs uppercase tracking-wider text-primary mb-2">Internship</div>
+              <div className="mono text-xs uppercase tracking-wider text-primary mb-2">Experience</div>
               <h4 className="font-display text-lg font-semibold">{e.role}</h4>
               <div className="text-sm text-muted-foreground mb-4">{e.org}</div>
               <ul className="space-y-2">

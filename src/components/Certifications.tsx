@@ -6,7 +6,7 @@ import { Award, BookOpen, Users, Trophy, Code2 } from "lucide-react";
 const certs = [
   {
     icon: BookOpen,
-    title: "Sustainable Happiness & Cloud Computing",
+    title: "Cloud Computing & Sustainable Happiness",
     issuer: "NPTEL",
     color: "from-cyan-400 to-blue-500",
   },
@@ -18,13 +18,13 @@ const certs = [
   },
   {
     icon: Users,
-    title: "Active Member – 2024",
+    title: "Active Member · 2024",
     issuer: "Google Developer Groups (GDG)",
     color: "from-emerald-400 to-teal-500",
   },
   {
     icon: Code2,
-    title: "Java & React (Frontend Developer)",
+    title: "Java & React Frontend Developer",
     issuer: "HackerRank",
     color: "from-amber-400 to-orange-500",
   },

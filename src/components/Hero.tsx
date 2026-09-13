@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { ArrowDown, Mail, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const roles = ["Full Stack Developer", "MERN Stack Engineer", "AI/ML Enthusiast", "Problem Solver"];
+const roles = ["Software Engineer", "Full Stack Developer", "MERN Stack Engineer", "AI Application Developer"];
 
 const Hero = () => {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -73,8 +73,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-base md:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed"
             >
-              Computer Science student crafting scalable web experiences with the MERN stack,
-              Python, and AI/ML. I turn ideas into clean, maintainable code.
+              Final-year Computer Science student building production-style MERN applications,
+              real-time systems, RESTful APIs, and AI experiences powered by modern LLMs.
             </motion.p>
 
             <motion.div
