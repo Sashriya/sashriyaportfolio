@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
-import { ArrowDown, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, Download, Mail, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = ["Software Engineer", "Full Stack Developer", "MERN Stack Engineer", "AI Application Developer"];
@@ -89,6 +89,14 @@ const Hero = () => {
               >
                 View Projects
                 <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+              </a>
+              <a
+                href="/Sashriya-M-Resume.pdf"
+                download="Sashriya-M-Resume.pdf"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full glass hover:bg-white/10 transition-colors font-semibold hover:text-primary"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
               </a>
               <a
                 href="#contact"
