@@ -21,6 +21,7 @@ const projects = [
     description: "An authenticated monitoring service that streams live server logs through WebSockets, with REST APIs, path-traversal protection, and efficient offset-based log tailing.",
     tags: ["Node.js", "Express.js", "MongoDB", "WebSockets"],
     gradient: "from-fuchsia-500 to-purple-600",
+    github: "https://github.com/Sashriya/log_monitoring",
   },
   {
     icon: Bot,
@@ -29,6 +30,7 @@ const projects = [
     description: "A deployed Tanglish conversational chatbot powered by Groq's LLaMA 3.1 API, featuring a consistent persona, session history, and live typing indicators.",
     tags: ["Python", "Streamlit", "Groq API", "LLaMA 3.1"],
     gradient: "from-emerald-500 to-teal-600",
+    github: "https://github.com/Sashriya/Buddybot",
   },
 ];
 
