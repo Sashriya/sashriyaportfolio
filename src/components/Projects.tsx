@@ -8,7 +8,7 @@ const projects = [
   {
     icon: FileText,
     title: "Google Docs Clone",
-    year: "2025",
+    year: "2026",
     description: "A real-time collaborative editor with concurrent multi-user editing, sub-second Socket.IO sync, JWT authentication, UUID-based routing, and persistent Quill documents.",
     tags: ["React.js", "Node.js", "MongoDB", "Socket.IO"],
     gradient: "from-cyan-500 to-blue-600",
@@ -17,7 +17,7 @@ const projects = [
   {
     icon: TerminalSquare,
     title: "LogMonitor",
-    year: "2025",
+    year: "2026",
     description: "An authenticated monitoring service that streams live server logs through WebSockets, with REST APIs, path-traversal protection, and efficient offset-based log tailing.",
     tags: ["Node.js", "Express.js", "MongoDB", "WebSockets"],
     gradient: "from-fuchsia-500 to-purple-600",
@@ -26,7 +26,7 @@ const projects = [
   {
     icon: Bot,
     title: "BuddyBot",
-    year: "2026",
+    year: "2025",
     description: "A deployed Tanglish conversational chatbot powered by Groq's LLaMA 3.1 API, featuring a consistent persona, session history, and live typing indicators.",
     tags: ["Python", "Streamlit", "Groq API", "LLaMA 3.1"],
     gradient: "from-emerald-500 to-teal-600",
